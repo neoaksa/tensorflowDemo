@@ -1,4 +1,5 @@
-### This is a tensorflow demo using the famous mnist data
+### mnist Demo.py
+#### This is a tensorflow demo using the famous mnist data
 MLP structure is dynamic
 ```python
 structure = [784,500,500,10]
