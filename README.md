@@ -1,4 +1,4 @@
-### mnist Demo.py
+### 1.mnist Demo.py
 #### This is a tensorflow demo using the famous mnist data
 MLP structure is dynamic
 ```python
@@ -14,4 +14,12 @@ epoch_max = 10
 def netural_network_model(x):
 #training
 def train_model(x):
+```
+
+### 2.word sentiment model
+#### put the training and test dataset into folder “sentiment140” which you can download from [here](http://help.sentiment140.com/for-students/)
+```python
+# word2vec.py is used for word to vector using one-hot coding
+# ANN.py is ANN structure and training , testing parts
+
 ```
