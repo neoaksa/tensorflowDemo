@@ -46,3 +46,4 @@ trainingFile = downloadFile("1adyPElLZ118U1aKVEeqrsVNX4b-VoVDm","training.160000
 # test file download
 testingFile = downloadFile("1-6lzGSZ-IkIjYiUULuhpoADPe55aSWcR","testdata.manual.2009.06.14.csv")
 ```
+**Beware that you should keep your brower active, otherwise the process will be stopped if long time computation is taken. Personlly, I installed an app to keep computer waked up.**
