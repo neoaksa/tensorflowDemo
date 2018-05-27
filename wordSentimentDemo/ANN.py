@@ -58,11 +58,11 @@ tf_log = 'tf.log'
 def train_neural_network(x):
     # prediction, cost and gradient decrease
     prediction = netural_network_model(x)
-    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=prediction, labels=y))
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=prediction, labels=y))
     optimizer = tf.train.AdamOptimizer().minimize(cost)
 
     with tf.Session() as sess:
-        sess.run(tf.initialize_all_variables())
+        sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
         try:
             epoch = int(open(tf_log, 'r').read().split('\n')[-2]) + 1
@@ -122,7 +122,7 @@ train_neural_network(x)
 def test_neural_network():
     prediction = netural_network_model(x)
     with tf.Session() as sess:
-        sess.run(tf.initialize_all_variables())
+        sess.run(sess.run(tf.global_variables_initializer()))
         saver = tf.train.Saver()
         # load the traning session for model
         try:
@@ -155,10 +155,10 @@ def test_neural_network():
 test_neural_network()
 
 @test_neural_network.register(str)
-def test_neural_network(input_data):
+def _(input_data):
     prediction = netural_network_model(x)
     with tf.Session() as sess:
-        sess.run(tf.initialize_all_variables())
+        sess.run(sess.run(tf.global_variables_initializer()))
         saver = tf.train.Saver()
         with open('lexicon.pickle', 'rb') as f:
             lexicon = pickle.load(f)
