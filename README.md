@@ -47,3 +47,6 @@ trainingFile = downloadFile("1adyPElLZ118U1aKVEeqrsVNX4b-VoVDm","training.160000
 testingFile = downloadFile("1-6lzGSZ-IkIjYiUULuhpoADPe55aSWcR","testdata.manual.2009.06.14.csv")
 ```
 **Beware that you should keep your brower active, otherwise the process will be stopped if long time computation is taken. Personlly, I installed an app to keep computer waked up.**
+
+### 3.Tensorflow_Princples.ipynb
+Tensorflow_Princples.ipynb is a group of tensorflow demo which consists of basic concepts, NLP, CNN and RNN implemented by tensorflow. I run it on Google Colaboratory as it provides a free GPU accleration.
