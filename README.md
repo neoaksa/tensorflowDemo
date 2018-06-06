@@ -30,7 +30,12 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive 
 from google.colab import auth 
 from oauth2client.client import GoogleCredentials
+from googleapiclient.discovery import build
+from google.colab import auth
 
+# authenticate google drive
+auth.authenticate_user()
+drive_service = build('drive', 'v3')
 # 1. Authenticate and create the PyDrive client.
 gauth = GoogleAuth()
 gauth.credentials = GoogleCredentials.get_application_default()
@@ -42,9 +47,7 @@ def downloadFile(inputfilename,outputfilename):
     downloaded.GetContentFile(outputfilename)
     
 # traning file download
-trainingFile = downloadFile("1adyPElLZ118U1aKVEeqrsVNX4b-VoVDm","training.1600000.processed.noemoticon.csv")
-# test file download
-testingFile = downloadFile("1-6lzGSZ-IkIjYiUULuhpoADPe55aSWcR","testdata.manual.2009.06.14.csv")
+FileObj = downloadFile("1ab82uNDDxCGp_O7avHp9ISwyemviwzH_","1365681.csv")
 ```
 **Beware that you should keep your brower active, otherwise the process will be stopped if long time computation is taken. Personlly, I installed an app to keep computer waked up.**
 
