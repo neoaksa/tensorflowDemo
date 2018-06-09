@@ -48,6 +48,13 @@ def downloadFile(inputfilename,outputfilename):
     
 # traning file download
 FileObj = downloadFile("1ab82uNDDxCGp_O7avHp9ISwyemviwzH_","1365681.csv")
+
+# upload file
+# save to google drive folder:1QiH6uMc9VuZLku4rybq8Eey7rR2cBKW1 is id of sharefolder
+f = drive.CreateFile({"parents": [{"kind": "drive#fileLink","id": '1QiH6uMc9VuZLku4rybq8Eey7rR2cBKW1'}]})
+f.SetContentFile('weather.h5')
+f.Upload()
+print('Uploaded file with ID {}'.format(f.get('id')))
 ```
 **Beware that you should keep your brower active, otherwise the process will be stopped if long time computation is taken. Personlly, I installed an app to keep computer waked up.**
 
