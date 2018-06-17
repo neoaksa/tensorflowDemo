@@ -62,4 +62,4 @@ print('Uploaded file with ID {}'.format(f.get('id')))
 Tensorflow_Princples.ipynb is a group of tensorflow demo which consists of basic concepts, NLP, CNN and RNN implemented by tensorflow. I run it on Google Colaboratory as it provides a free GPU accleration.
 
 ### 4. Weather Prediction
-According to the hourly weather data in **Grand Rapids**, I create a RNN model to predict the probability of snowy in the next 24 hours. 
+According to the hourly weather data in **Grand Rapids**, I create a RNN model to predict the probability of snowy in the next 24 hours. More detial please see readme.md on weather prediction folder.
