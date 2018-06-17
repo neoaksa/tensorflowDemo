@@ -12,4 +12,7 @@ The training process is deployed in Colaboratory by Google, the script is "**wea
 Using flask running on python is pretty easy way to open this  model to public. You can find code in **server.py**.
 
 ## How to call server on android
-Using Json to transfer array to flask server, and get feedback by string. You can find code in **Client.java**.
+Using Json to transfer array to flask server, and get feedback by string. You can find code in **PredictionActivity**.
+
+## issue to be waiting to fix:
+I dont think Json is a good way to transfer multidimension array, there must be another way, maybe [flatbuffers](https://google.github.io/flatbuffers/) is a good method.
