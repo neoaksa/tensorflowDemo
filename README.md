@@ -69,4 +69,5 @@ According to the hourly weather data in **Grand Rapids**, I create a RNN model t
 ![LTSM](/img/LSTM.jpg)
 
 **GRU**
+
 ![GRU](/img/GRU.jpg)
